@@ -1,0 +1,271 @@
+{
+	"info": {
+		"_postman_id": "10d8bc78-7809-4d83-b58e-7f6fe03c4cf0",
+		"name": "Accenture",
+		"description": "PETICIONES HTTPS PARA ACCENTURE PRUEBA TECNICA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15708861"
+	},
+	"item": [
+		{
+			"name": "Franquicia",
+			"item": [
+				{
+					"name": "CrearFranquicia",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \r\n    \"nombreFranquicia\": \"KFC\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/franquicias/crear-franquicia",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"franquicias",
+								"crear-franquicia"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "MayorStock",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/franquicias/1/mayorStock",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"franquicias",
+								"1",
+								"mayorStock"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ActualizarNombreFranquicia",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombreFranquicia\":\"Kokoriko\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/franquicias/actualizarNombre/4?nombreFranquicia=Kokoriko",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"franquicias",
+								"actualizarNombre",
+								"4"
+							],
+							"query": [
+								{
+									"key": "nombreFranquicia",
+									"value": "Kokoriko"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Surcusal",
+			"item": [
+				{
+					"name": "AgregarSucursalAFranquicia",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombreSucursal\":\"Nike Sur\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/sucursales/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"sucursales",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ActualizarNombreSucursal",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/sucursales/actualizarNombre/2?nombreSucursal=Nike Oriente",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"sucursales",
+								"actualizarNombre",
+								"2"
+							],
+							"query": [
+								{
+									"key": "nombreSucursal",
+									"value": "Nike Oriente"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Producto",
+			"item": [
+				{
+					"name": "AgregarASucursal",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Chicken Nuggets\",\r\n    \"stock\": \"150\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/productos/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"productos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ActualizarNombreProducto",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/productos/actualizarNombre/4?nombre=Coca-Cola",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"productos",
+								"actualizarNombre",
+								"4"
+							],
+							"query": [
+								{
+									"key": "nombre",
+									"value": "Coca-Cola"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ActualizarStock",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/productos/1/stock?stock=25",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"productos",
+								"1",
+								"stock"
+							],
+							"query": [
+								{
+									"key": "stock",
+									"value": "25"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EliminarProducto",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/productos/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"productos",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
