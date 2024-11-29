@@ -18,6 +18,7 @@ public class FranquiciaService {
 	@Autowired
 	private FranquiciaRepository franquiciaRepo;
 	
+	@Autowired
 	private SucursalService sucursalService;
 	
 	public Franquicia crearFranquicia(Franquicia franquicia) {

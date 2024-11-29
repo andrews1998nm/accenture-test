@@ -2,6 +2,8 @@ package com.springboot.accenture.app.models;
 
 import java.io.Serializable;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -36,6 +38,7 @@ public class Producto implements Serializable {
 	
 	@ManyToOne
 	@JoinColumn(name = "sucursal_id")
+	@JsonBackReference
 	private Sucursal sucursal;
 
 	public String getNombre() {

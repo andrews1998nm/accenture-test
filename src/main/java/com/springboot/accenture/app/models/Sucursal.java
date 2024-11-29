@@ -3,6 +3,8 @@ package com.springboot.accenture.app.models;
 import java.io.Serializable;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -37,6 +39,7 @@ public class Sucursal implements Serializable {
 	
 	@ManyToOne
 	@JoinColumn(name = "franquicia_id")
+	@JsonBackReference
 	private Franquicia franquicia;
 	
 	@OneToMany(mappedBy = "sucursal", cascade = CascadeType.ALL)
